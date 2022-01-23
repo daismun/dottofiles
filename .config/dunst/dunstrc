@@ -1,0 +1,22 @@
+[global]
+    class       = Dunst
+    alignment   = center
+    width       = 300
+    height      = 300
+	 frame_color = "#DDB6F2"
+	 frame_width = 2
+	 font        = Comfortaa 10
+
+[urgency_low]
+    background = "#1E1D2F"
+    foreground = "#D9E0EE"
+
+[urgency_normal]
+    background = "#1E1D2F"
+    foreground = "#D9E0EE"
+
+[urgency_critical]
+    background  = "#1E1D2F"
+    foreground  = "#F28FAD"
+
+# vim: ft=cgf

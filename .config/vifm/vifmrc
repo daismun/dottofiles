@@ -1,0 +1,5 @@
+colorscheme dracula
+filetype *.jpg,*.jpeg,*.png,*.gif vimiv %f 2>/dev/null &
+filetype *.mp4,*.webm,*.mkv mpv 2>/dev/null &
+filetype *.pdf,*.epub zathura 2>/dev/null &
+set nu rnu

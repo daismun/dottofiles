@@ -1,0 +1,17 @@
+# XDG
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME="$HOME/.config"
+# Cleanup
+export PARALLEL_HOME="$XDG_CONFIG_HOME/parallel"
+export GTK_RC_FILES="$XDG_CONFIG_HOME/gtk-1.0/gtkrc"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+# Path
+export PATH="$PATH:$CARGO_HOME/bin:$HOME/.local/bin:$HOME/node_modules/.bin"
+export GOPATH="$HOME/.local/go"
+export EDITOR="nvim"
+export BROWSER="firefox"
+# Misc
+export _JAVA_AWT_WM_NONREPARENTING=1
+export QT_QPA_PLATFORMTHEME=qt5ct
