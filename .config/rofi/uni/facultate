@@ -1,0 +1,88 @@
+#!/usr/bin/env bash
+
+conf=$HOME/.config/rofi/uni/config.rasi
+
+orar() {
+	brave 'file:///home/lovesome/Documents/Facultate/orar.html'
+}
+tce_curs() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:b4e98b11f142419da1e871e1d095faeb@thread.tacv2&ctx=channel'
+}
+tce_sem() { 
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:1c00edbc9b074db1b63ff30e631ff10d@thread.tacv2&ctx=channel'
+}
+mci() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/MCI_AG?threadId=19:771eae1e963d44829bdecc5394c7cf9e@thread.tacv2&ctx=channel'
+}
+inf_sem() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:m6DkaO5KjlCQoBST6_nfPO11KKnWxlQAtEgwnkYpmHU1@thread.tacv2&ctx=channel'
+}
+cad_curs() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:Gd1-OSsFXp6psrwNbHf6zov5R9DdGXpXvxWAaTER0jA1@thread.tacv2&ctx=channel'
+}
+cad_lab() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:1634JB8j8mB2gcPRZJ-AhZLS25Ocb7rx6aXIhAt3Ktg1@thread.tacv2&ctx=channel'
+}
+mec() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:1a02pUn1XoO4_38chcCi6x1kSUAF5rSNYZrx4nC1mPo1@thread.tacv2&ctx=channel'
+}
+eng() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:H_RXxfUNGPfo57XQzaE7uBbojVUuJ11zX49HjXPuPww1@thread.tacv2&ctx=channel'
+}
+msp_curs() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:HwnHxGh2gBJ425W7GRrZXtNbGvNnU_U-b0RGzT4F3a81@thread.tacv2&ctx=channel'
+}
+msp_sem() {
+	brave 'https://teams.microsoft.com/_#/school/conversations/General?threadId=19:B-p6bjshJfDpP2jm2HJa3X01rqzG2z-oG_7jLwRNDxM1@thread.tacv2&ctx=channel'
+}
+
+
+get_options() {
+  echo " Orar"
+  echo " Teoria Câmpului Electromagnetic Curs"
+  echo " Teoria Câmpului Electromagnetic Seminar"
+  echo " Medii de Calcul Inginerești"
+  echo " Informatică Aplicată Seminar"
+  echo " Grafică Asistată de Calculator Curs"
+  echo " Grafică Asistată de Calculator Laborator"
+  echo " Materiale Electrotehnice"
+  echo " Engleză"
+  echo " Matematici Speciale Curs"
+  echo " Matematici Speciale Seminar"
+}
+
+
+  choice=$( (get_options) | rofi -theme $conf -dmenu -i -p "Facultate" )
+
+  if [[ -z "${choice// }" ]]; then
+      exit 1
+  fi
+
+  case $choice in
+	  " Orar")
+	  orar;;
+  " Teoria Câmpului Electromagnetic Curs")
+	  tce_curs;;
+  " Teoria Câmpului Electromagnetic Seminar")
+	  tce_sem;;
+  " Medii de Calcul Inginerești")
+	  mci;;
+  " Informatică Aplicată Seminar")
+	  inf_sem;;
+  " Grafică Asistată de Calculator Curs")
+	  cad_curs;;
+  " Grafică Asistată de Calculator Laborator")
+	  cad_lab;;
+  " Materiale Electrotehnice")
+	  mec;;
+  " Engleză")
+	  eng;;
+  " Matematici Speciale Curs")
+	  msp_curs;;
+  " Matematici Speciale Seminar")
+	  msp_sem;;
+  esac
+  set -e
+}
+
+exit 0

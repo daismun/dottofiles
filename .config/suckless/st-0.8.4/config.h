@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code:pixelsize=15>:antialias=true:autohint=true";
+static char *font = "Fira Code:pixelsize=16>:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -94,38 +94,42 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 1;
+float alpha = 0.96;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  /* 8 normal colors */
-  [0] = "#6E6C7C", /* black   */
-  [1] = "#E28C8C", /* red     */
-  [2] = "#B3E1A3", /* green   */
-  [3] = "#EADDA0", /* yellow  */
-  [4] = "#A4B9EF", /* blue    */
-  [5] = "#C6AAE8", /* magenta */
-  [6] = "#9DDDCB", /* cyan    */
-  [7] = "#D7DAE0", /* white   */
+	/* 8 normal colors */
+	"#6E6C7E",
+	"#F28FAD",
+	"#ABE9B3",
+	"#FAE3B0",
+	"#96CDFB",
+	"#F5C2E7",
+	"#89DCEB",
+	"#D9E0EE",
 
-  /* 8 bright colors */
-  [8]  = "#6E6C7C", /* black   */
-  [9]  = "#E28C8C", /* red     */
-  [10] = "#B3E1A3", /* green   */
-  [11] = "#EADDA0", /* yellow  */
-  [12] = "#A4B9EF", /* blue    */
-  [13] = "#C6AAE8", /* magenta */
-  [14] = "#9DDDCB", /* cyan    */
-  [15] = "#D7DAE0", /* white   */
+	/* 8 bright colors */
+	"#988BA2",
+	"#F28FAD",
+	"#ABE9B3",
+	"#FAE3B0",
+	"#96CDFB",
+	"#F5C2E7",
+	"#89DCEB",
+	"#D9E0EE",
 
-  /* special colors */
-  [256] = "#1E1E28", /* background */
-  [257] = "#D7DAE0", /* foreground */
+
+
+[256] = "#D9E0EE", /* default foreground colour */
+[257] = "#1E1E2E", /* default background colour */
+[258] = "#C3BAC6", /*575268*/
+
 };
-unsigned int defaultfg = 257;
-unsigned int defaultbg = 256;
-static unsigned int defaultcs = 257;
-static unsigned int defaultrcs = 257;
+
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+static unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 258;
 unsigned int defaultitalic = 7;
 unsigned int defaultunderline = 7;
 /*

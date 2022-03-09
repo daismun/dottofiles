@@ -1,22 +1,32 @@
 [global]
-    class       = Dunst
-    alignment   = center
-    width       = 300
-    height      = 300
-	 frame_color = "#DDB6F2"
+	 title = Dunst
+	 class = Dunst
+    alignment   = left
+    shrink = no
+    padding = 20
+    horizontal_padding = 20
+    width = 275
+    height = 100
+    offset = 40x60
+    origin = top-right
+    max_icon_size= 60
+    frame_color = "#151515"
+    separator_color = "#151515"
 	 frame_width = 2
 	 font        = Comfortaa 10
-
+	 corner_radius = 3
 [urgency_low]
-    background = "#1E1D2F"
-    foreground = "#D9E0EE"
+  background = "#1a1826"
+  foreground = "#f5c2e7"
+  timeout = 5
 
 [urgency_normal]
-    background = "#1E1D2F"
-    foreground = "#D9E0EE"
+  background = "#1a1826"
+  foreground = "#f5c2e7"
+  timeout = 10
 
 [urgency_critical]
-    background  = "#1E1D2F"
-    foreground  = "#F28FAD"
-
+  background = "#1a1826"
+  foreground = "#f5c2e7"
+  timeout = 20
 # vim: ft=cgf

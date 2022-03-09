@@ -12,18 +12,22 @@ XF86AudioPrev
    mpc prev
 
 # program launcher
+super + control + v
+	faculta
 super + @space
-	rofi_launcher
+	rofi -show drun -modi drun,run
 # exit
 super + x
 	rofi_powermenu
 # browser
 super + shift + w
-	chromium
+	brave
 # File Manager
 super + shift + f
 	pcmanfm-qt
 # screenshot
+super + control + Print
+	maim -d 5 ~/Pictures/Screenshots/$(date '+%Y%m%d-%H%M%S').png
 Print
 	maim ~/Pictures/Screenshots/$(date '+%Y%m%d-%H%M%S').png
 super + Print
@@ -46,6 +50,12 @@ super + control + n
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# Brightness
+XF86MonBrightnessUp
+	xbacklight -inc 10
+XF86MonBrightnessDown
+	xbacklight -dec 10
 
 ##############
 #   volume   #

@@ -22,15 +22,12 @@ bindkey "^[[1;5C" forward-word
 alias move_by_date='for x in */*.jpg; do   d=$(date -r "$x" +%Y-%m-%d);   mkdir -p DATES/"$d";   mv -- "$x" DATES/"$d/"; done'
 alias mnt_nya='mkdir ~/Nya && sshfs murasaki@nyarlathotep:$HOME ~/Nya'
 alias umnt_nya="fusermount -u ~/Nya && rm -r ~/Nya"
-alias vim="nvim"
+alias vim='nvim'
+alias visudo='sudo nvim'
 alias vi="nvim --noplugin"
 alias c="calcurse"
 alias fix_pulseaudio="pulseaudio --daemonize=no --exit-idle-time=-1"
-alias xi="sudo xbps-install -S"
-alias xr="sudo xbps-remove -R"
-alias xq="sudo xbps-query -Rs"
-alias xe="sudo xbps-query -m"
-alias xu="sudo xbps-install -Suv"
+alias p="sudo pacman"
 alias pm="pulsemixer"
 alias am="alsamixer"
 alias ls="exa -l --icons"
